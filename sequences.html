@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequence Riddles — LogicGrid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LogicGrid</div>
+    <nav class="nav-links">
+      <a href="index.html">Arena Home</a>
+      <a href="cipher.html">Cipher Decoder</a>
+      <a href="sequences.html" class="active">Sequence Riddles</a>
+      <a href="leaderboard.html">Score &amp; Ranks</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero" style="padding:26px;">
+      <span class="badge">MODULE 02 &bull; PATTERN DEDUCTION</span>
+      <h1 style="font-size:1.8rem;margin-top:8px;">Logical Sequence Riddles</h1>
+      <p>Identify the mathematical or algorithmic rule governing each sequence and enter the missing next term.</p>
+    </section>
+    <article class="card" style="max-width:600px;margin:0 auto;">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="badge" id="seqDifficulty">Tier 1 &bull; Easy</span>
+          <span style="color:#94a3b8;font-size:0.9rem;">Streak: <strong id="seqStreak" style="color:#22c55e;">0</strong></span>
+        </div>
+        <h2 style="margin-top:14px;font-family:monospace;font-size:1.6rem;" id="seqDisplay">2, 6, 12, 20, 30, ?</h2>
+        <p id="seqClue" style="margin-top:8px;">Clue: Differences increase by +2 each step.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <input type="number" id="seqInput" placeholder="Enter the missing number...">
+        <button class="btn" id="submitSeqBtn">Submit Answer</button>
+        <button class="btn btn-secondary" id="skipSeqBtn">Next Riddle</button>
+        <p class="status-msg" id="seqFeedback"></p>
+      </div>
+    </article>
+  </main>
+  <footer>LogicGrid Puzzle Arena &bull; Sequence Riddles Module</footer>
+  <script src="sequences.js"></script>
+</body>
+</html>
