@@ -3,7 +3,7 @@
 A browser-based puzzle web application featuring Caesar cipher decoding challenges, logical sequence deduction riddles, and a persistent local score & rank tracker.
 
 ## Team & Project Details
-- **Developer:** Anuj Jagdish Somani (USN: 221 | Section B)
+- **Developer:** Anuj (USN: 221 | Section B)
 - **Git Workflow:** Feature-branch development (`feature/cipher-decoder`, `feature/sequence-riddles`, `feature/score-tracker`) merged via Pull Requests into `main`.
 
 ## Modules
