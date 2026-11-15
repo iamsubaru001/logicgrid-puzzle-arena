@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score & Ranks — LogicGrid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LogicGrid</div>
+    <nav class="nav-links">
+      <a href="index.html">Arena Home</a>
+      <a href="cipher.html">Cipher Decoder</a>
+      <a href="sequences.html">Sequence Riddles</a>
+      <a href="leaderboard.html" class="active">Score &amp; Ranks</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero" style="padding:26px;">
+      <span class="badge">MODULE 03 &bull; LOCALSTORAGE ANALYTICS</span>
+      <h1 style="font-size:1.8rem;margin-top:8px;">Detective Progress &amp; Rank Board</h1>
+      <p>All solved ciphers and sequence riddles persist automatically in your browser's localStorage.</p>
+    </section>
+    <section class="grid-3" style="margin-bottom:24px;">
+      <div class="card">
+        <span class="badge">TOTAL SCORE</span>
+        <h2 id="totalPoints" style="font-size:2rem;">0 pts</h2>
+        <p>Accumulated across all arena modules</p>
+      </div>
+      <div class="card">
+        <span class="badge">PUZZLES SOLVED</span>
+        <h2 id="solvedCount" style="font-size:2rem;">0</h2>
+        <p>Verified decryptions &amp; sequences</p>
+      </div>
+      <div class="card">
+        <span class="badge">CURRENT RANK</span>
+        <h2 id="detectiveRank" style="font-size:1.5rem;color:#22c55e;">Novice Analyst</h2>
+        <p>Solve more puzzles to reach Grandmaster</p>
+      </div>
+    </section>
+    <article class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+        <h3>Solved Puzzle Log</h3>
+        <button class="btn btn-secondary" id="clearHistoryBtn">Reset Progress</button>
+      </div>
+      <div id="historyList" style="margin-top:12px;display:flex;flex-direction:column;gap:10px;"></div>
+    </article>
+  </main>
+  <footer>LogicGrid Puzzle Arena &bull; Persistent Score &amp; Rank Tracker</footer>
+  <script src="scores.js"></script>
+</body>
+</html>
