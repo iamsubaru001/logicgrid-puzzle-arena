@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cipher Decoder — LogicGrid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LogicGrid</div>
+    <nav class="nav-links">
+      <a href="index.html">Arena Home</a>
+      <a href="cipher.html" class="active">Cipher Decoder</a>
+      <a href="sequences.html">Sequence Riddles</a>
+      <a href="leaderboard.html">Score &amp; Ranks</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero" style="padding:26px;">
+      <span class="badge">MODULE 01 &bull; CAESAR SHIFT</span>
+      <h1 style="font-size:1.8rem;margin-top:8px;">Cipher Decoder Challenge</h1>
+      <p>Use the shift slider to preview shifted letters, or submit the decoded plaintext directly to earn points.</p>
+    </section>
+    <div class="grid-3">
+      <article class="card">
+        <div>
+          <span class="badge" id="cipherLevelBadge">Transmission #1</span>
+          <h3 style="margin-top:10px;">Intercepted Text</h3>
+          <p id="cipherPrompt" style="font-family:monospace;font-size:1.15rem;color:#38bdf8;margin:12px 0;">KHOOR ZRUOG</p>
+          <p id="cipherHint">Hint: Classic shift of 3 used by Julius Caesar.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <input type="text" id="cipherAnswer" placeholder="Enter decoded plaintext...">
+          <button class="btn" id="checkCipherBtn">Verify Decryption</button>
+          <button class="btn btn-secondary" id="nextCipherBtn">Next Transmission</button>
+          <p class="status-msg" id="cipherStatus"></p>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <span class="badge">TOOLKIT</span>
+          <h3 style="margin-top:10px;">Live Shift Sandbox</h3>
+          <p>Test any shift value (-25 to +25) on custom text or the intercepted message.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <input type="text" id="sandboxInput" value="KHOOR ZRUOG">
+          <label for="shiftRange" style="font-size:0.9rem;color:#94a3b8;">Shift Offset: <strong id="shiftVal" style="color:#38bdf8;">-3</strong></label>
+          <input type="range" id="shiftRange" min="-25" max="25" value="-3">
+          <div style="background:#0f172a;padding:12px;border-radius:8px;border:1px solid #334155;font-family:monospace;color:#22c55e;" id="sandboxOutput">HELLO WORLD</div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer>LogicGrid Puzzle Arena &bull; Cipher Decoder Module</footer>
+  <script src="cipher.js"></script>
+</body>
+</html>
